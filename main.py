@@ -35,7 +35,7 @@ def create_csv():
   tracks['distance'] = np.min(distances, axis=1)
   
   # Sort by cluster and distance
-  sorted_tracks = tracks.sort_values(['cluster', 'distance'], ascending=False)
+  sorted_tracks = tracks.sort_values(['cluster', 'distance'])
   
   top_songs = pd.DataFrame(columns=['cluster', 'name', 'distance'])
   
