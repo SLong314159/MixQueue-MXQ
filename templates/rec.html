@@ -6,7 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="getSong()">
+  <p id="rec" style="display:none;">{{rec}}</p>
+  <p id="song" style="display:none;">{{song}}</p>
 	<h1>MixQueue</h1>
   <h3 id="instructions">Song Recommendations for DJs</h3>
   <p style="text-align: center;">Instructions: Type in a song to receive a recommendation of what song could be played next.</p>
@@ -20,7 +22,7 @@
         </div>
       </td>
       <td style="border-bottom: none; vertical-align:bottom;">
-        <input type="submit" name="gen" value="Generate Recomendation" class="btn" onclick="getLink()"><br>
+        <input type="submit" value="Generate Recomendation" class="btn" onclick="getLink()"><br>
         <p id="linkGet"></p><br><br>
       </td>
       <td style="border-bottom: none;">
@@ -33,4 +35,15 @@
     </tr>
   </table>
   <br>
+<!-- <h3>Alternative Recommendations: </h3>
+  <table id="allSongs">
+    <thead>
+      <tr>
+        <th>Song Titles</th>
+      </tr>
+    </thead>
+    <tbody id="songs"></tbody>
+  </table> -->
+</body>
+</html>
 	
