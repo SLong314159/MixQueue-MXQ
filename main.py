@@ -41,8 +41,7 @@ def create_csv():
   
   # top 30 songs from each cluster to the datarame
   for i in range(20):
-    top_songs = top_songs.append(
-      sorted_tracks[sorted_tracks['cluster'] == i].head(20)[['cluster', 'name']])
+    top_songs = top_songs.append(sorted_tracks[sorted_tracks['cluster'] == i].head(30)[['cluster','name', 'distance']])
   
   top_songs.to_csv('top_songs_by_cluster.csv', index=False)
 
